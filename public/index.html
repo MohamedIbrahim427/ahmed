@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#142c3a">
+  <title>منصة مستر أحمد | التعليم يبدأ بخطوة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-story">
+      <div class="brand brand-light"><span class="brand-mark">أ</span><span>منصة مستر أحمد</span></div>
+      <div class="story-copy">
+        <span class="eyebrow">مساحتك للتعلّم والتقدّم</span>
+        <h1>كل درس يقرّبك<br>من هدفك.</h1>
+        <p>مكان واحد تتابع منه شرحك، واجباتك، امتحاناتك ونتائجك — بخطوات واضحة ومن غير تعقيد.</p>
+      </div>
+      <div class="story-footer"><span>تعليم منظم. متابعة مستمرة. نتيجة تستحقها.</span><span>01 / LEARN</span></div>
+    </section>
+    <section class="auth-panel">
+      <div class="auth-panel-inner">
+        <div class="mobile-brand brand"><span class="brand-mark">أ</span><span>منصة مستر أحمد</span></div>
+        <div id="authForms">
+          <div class="auth-heading"><span class="eyebrow">أهلاً بعودتك</span><h2>سجّل دخولك</h2><p>ادخل إلى حسابك لمتابعة رحلتك التعليمية.</p></div>
+          <form id="loginForm" class="form-stack">
+            <label>البريد الإلكتروني<input name="email" type="email" placeholder="name@example.com" required autocomplete="email"></label>
+            <label>كلمة المرور<input name="password" type="password" placeholder="••••••••" required autocomplete="current-password"></label>
+            <button class="btn btn-primary btn-wide" type="submit">دخول إلى المنصة <span>←</span></button>
+            <p class="form-message" id="loginMessage" aria-live="polite"></p>
+          </form>
+          <div class="auth-switch">ليس لديك حساب؟ <button type="button" class="text-button" id="showRegister">إنشاء حساب طالب</button></div>
+          <div class="auth-admin-link"><a href="/admin">مساحة إدارة المنصة <span>↗</span></a></div>
+        </div>
+        <div id="registerPanel" class="hidden">
+          <div class="auth-heading"><span class="eyebrow">بداية جديدة</span><h2>إنشاء حساب طالب</h2><p>اكتب بياناتك للانضمام إلى المنصة.</p></div>
+          <form id="registerForm" class="form-stack">
+            <label>الاسم بالكامل<input name="name" type="text" placeholder="اسم الطالب" required minlength="2"></label>
+            <label>البريد الإلكتروني<input name="email" type="email" placeholder="name@example.com" required></label>
+            <label>الصف الدراسي<select name="grade" required><option value="">اختر الصف</option><option value="الصف الأول الإعدادي">الصف الأول الإعدادي</option><option value="الصف الثاني الإعدادي">الصف الثاني الإعدادي</option><option value="الصف الثالث الإعدادي">الصف الثالث الإعدادي</option><option value="الصف الأول الثانوي">الصف الأول الثانوي</option><option value="الصف الثاني الثانوي">الصف الثاني الثانوي</option><option value="الصف الثالث الثانوي">الصف الثالث الثانوي</option></select></label>
+            <label>كلمة المرور<input name="password" type="password" placeholder="8 أحرف على الأقل" required minlength="8"></label>
+            <button class="btn btn-primary btn-wide" type="submit">إنشاء الحساب <span>←</span></button>
+            <p class="form-message" id="registerMessage" aria-live="polite"></p>
+          </form>
+          <div class="auth-switch">لديك حساب بالفعل؟ <button type="button" class="text-button" id="showLogin">تسجيل الدخول</button></div>
+        </div>
+        <div id="setupPanel" class="hidden">
+          <div class="auth-heading"><span class="eyebrow">إعداد أول مرة</span><h2>إنشاء حساب المدرّس</h2><p>هذه الخطوة تظهر مرة واحدة فقط لإنشاء حساب المدير الرئيسي.</p></div>
+          <form id="setupForm" class="form-stack">
+            <label>اسم المدرّس<input name="name" required minlength="2" placeholder="مستر أحمد"></label>
+            <label>البريد الإلكتروني<input name="email" type="email" required placeholder="teacher@example.com"></label>
+            <label>كلمة مرور قوية<input name="password" type="password" required minlength="10" placeholder="10 أحرف على الأقل"></label>
+            <button class="btn btn-primary btn-wide" type="submit">إنشاء حساب الإدارة <span>←</span></button>
+            <p class="form-message" id="setupMessage" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+      <div class="auth-bottom">© <span data-platform-name id="year">منصة مستر أحمد</span></div>
+    </section>
+  </main>
+  <script src="/js/app.js"></script>
+<script src="/js/auth.js"></script>
+</body></html>
